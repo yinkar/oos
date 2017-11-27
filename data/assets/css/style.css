@@ -1,0 +1,258 @@
+@import "reset.css";
+@import url(https://fonts.googleapis.com/css?family=Ubuntu&subset=latin,latin-ext);
+
+body {
+	background: #000000 url('../../user/wallpaper.jpg');
+	background-size: cover;
+	background-attachment: fixed;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	font-family: 'Ubuntu', sans-serif;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	cursor: default;
+}
+
+.pointer {
+	cursor: pointer;
+}
+
+#desktop {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 10px;
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+
+#taskbar {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 40px;
+	background: rgba(0, 0, 0, .8);
+	color: #ffffff;
+	z-index: 99;
+}
+
+.desktopitem {
+	display: block;
+	color: #ffffff;
+	width: 35px;
+	min-height: 30px;
+	overflow: hidden;
+	width: 50px;
+	min-height: 30px;
+	border: 1px solid transparent;
+	padding: 7px 10px;
+}
+
+.desktopitem:not(:last-of-type) {
+	margin-bottom: 10px;
+}
+
+.desktopitem:hover {
+	border: 1px solid #eeeeee;
+	background: rgba(255, 255, 255, .4);
+}
+
+.desktopitem .itemicon {
+	font-size: 30px;
+	width: 35px;
+	height: 30px;
+	text-align: center;
+	margin: 0 auto;
+	margin-left: 10px;
+	color: #607d8b;
+}
+
+.desktopitem .itemname {
+	font-size: 12px;
+	text-align: center;
+	display: block;
+	width: 50px;
+}
+
+#menuicon {
+	color: darkorange;
+	font-size: 30px;
+	display: block;
+	width: 30px;
+	height: 30px;
+	padding: 7px 10px;
+	float: left;
+}
+
+#menuicon:hover {
+	background: rgba(255, 255, 255, .3);
+	color: orange;
+}
+
+#systemtray {
+	float: right;
+	width: 100px;
+	z-index: 999;
+}
+
+#clock {
+	float: right;
+	width: 50px;
+	height: 20px;
+	padding: 13px 5px;
+	z-index: 999;
+	font-size: 13px;
+}
+
+#menu {
+	width: 250px;
+	height: 400px;
+	background: rgba(0, 0, 0, .8);
+	color: #ffffff;
+	z-index: 9999;
+	position: fixed;
+	bottom: 40px;
+	left: 0;
+	display: none;
+	border-bottom: 1px solid rgba(255, 255, 255, .1);
+	overflow: hidden;
+}
+
+#menu #apps li {
+	padding: 10px 20px;
+	border-bottom: 1px solid rgba(255, 255, 255, .1);
+}
+
+#menu #apps li:hover {
+	padding: 9px 19px;
+	background: rgba(255, 255, 255, .1);
+	border-left: 1px solid rgba(255, 255, 255, .3);
+	border-right: 1px solid rgba(255, 255, 255, .3);
+	border-top: 1px solid rgba(255, 255, 255, .3);
+}
+
+.window {
+	display: block;
+	width: 640px;
+	height: 480px;
+	background: rgba(0, 0, 0, .9);
+	border: 1px solid rgba(255, 255, 255, .3);
+	box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	position: fixed;
+	left: 30%;
+	top: 10%;
+	color: #ffffff;
+}
+
+.window .windowbar {
+	height: 37px;
+	width: 638px;
+	box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	background: rgba(255, 255, 255, .1);
+	border: 1px solid rgba(255, 255, 255, .3);
+	padding: 10px;
+}
+
+.window .windowbar .windowtitle {
+	float: left;
+}
+
+.window .windowbar .windowicons {
+	float: right;
+}
+
+.window .windowbar .windowicons > * {
+	cursor: pointer;
+}
+
+.window .windowbar .windowicons .closewindow {
+	margin: 0 5px;
+}
+
+.window .windowbar .windowicons .maximizewindow {
+	margin: 0 5px;
+}
+
+.window .windowbar .windowicons .closewindow:hover {
+	color: red;
+}
+
+.window .windowbar .windowicons .maximizewindow:hover {
+	color: royalblue;
+}
+
+.window .windowcontent {
+	padding: 20px;
+}
+
+.sabahlatan .itemicon {
+	color: #b54a24;
+}
+
+.musicplayer .itemicon {
+	color: #00bcd4;
+}
+
+.maximize {
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+
+.maximizebar {
+	width: 100% !important;
+}
+
+.notification {
+	color: #ffffff;
+	position: fixed;
+	right: 10px;
+	bottom: 60px;
+	font-size: 12px;
+	border-radius: 10px;
+	padding: 10px;
+}
+
+.notification:hover {
+	background: rgba(0, 0, 0, .5);
+}
+
+.notification .fa {
+	color: skyblue;
+	font-size: 15px;
+}
+
+.popup {
+	display: block;
+	width: 400px;
+	min-height: 50px;
+	background: rgba(0, 0, 0, .7);
+	border: 1px solid rgba(255, 255, 255, .3);
+	box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	position: fixed;
+	left: 30%;
+	top: 7%;
+	color: #ffffff;
+	padding: 25px;
+	font-size: .8em;
+}
+
+.popup:hover {
+	opacity: .7;
+}
+
+.clearfix {
+	clear: both;
+}
